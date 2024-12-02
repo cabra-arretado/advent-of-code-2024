@@ -37,7 +37,6 @@ func ReadFileAsMatrix(dayNumber string) [][]rune {
 	fmt.Println(base)
 	file, err := os.Open(base)
 	if err != nil {
-		fmt.Println(base)
 		panic(err)
 	}
 	defer file.Close()
