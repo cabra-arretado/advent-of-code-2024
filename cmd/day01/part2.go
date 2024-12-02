@@ -1,12 +1,13 @@
 package day01
 
 import (
+	"fmt"
 	"sort"
 	"strconv"
 	"strings"
 )
 
-func part1(input []string) int {
+func part2(input []string) int {
 	leftSlice := make([]int, 0)
 	rightSlice := make([]int, 0)
 	for _, line := range input {
@@ -36,5 +37,7 @@ func part1(input []string) int {
 		}
 	}
 
+	fmt.Println("TOTAL:", total)
 	return total
 }
+
