@@ -1,8 +1,6 @@
 package day01
 
 import (
-	"fmt"
-	"sort"
 	"strconv"
 	"strings"
 )
@@ -23,21 +21,25 @@ func part2(input []string) int {
 		leftSlice = append(leftSlice, leftNumber)
 		rightSlice = append(rightSlice, rightNumber)
 	}
-	sort.Ints(leftSlice)
-	sort.Ints(rightSlice)
-
-	total := 0
-
-	for i, leftNumber := range leftSlice {
-		rightNumber := rightSlice[i]
-		if rightNumber > leftNumber {
-			total += rightNumber - leftNumber
+	mapOfNumbers := make(map[int]int)
+	for _, rightNumber := range rightSlice {
+		_, ok := mapOfNumbers[rightNumber]
+		if ok {
+			mapOfNumbers[rightNumber]++
 		} else {
-			total += leftNumber - rightNumber
+			mapOfNumbers[rightNumber] = 1
 		}
 	}
 
-	fmt.Println("TOTAL:", total)
+	total := 0
+
+	for _, leftNumber := range leftSlice {
+		_, ok := mapOfNumbers[leftNumber]
+		if ok {
+			total += leftNumber * mapOfNumbers[leftNumber]
+		}
+	}
+
 	return total
 }
 
