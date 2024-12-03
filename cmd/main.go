@@ -3,6 +3,7 @@ package main
 import (
 	// "advent-of-code-2024/utils"
 	"advent-of-code-2024/cmd/day01"
+	"advent-of-code-2024/cmd/day02"
 	"bufio"
 	"fmt"
 	"os"
@@ -17,6 +18,8 @@ func main() {
 	switch input {
 	case "01":
 		day01.Day01()
+	case "02":
+		day02.Day02()
 	default:
 		fmt.Println("Day not found")
 	}
