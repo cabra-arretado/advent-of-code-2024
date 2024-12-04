@@ -3,6 +3,7 @@ package day02
 import (
 	"fmt"
 	"testing"
+	"strings"
 )
 var input = `7 6 4 2 1
 1 2 7 8 9
@@ -13,6 +14,7 @@ var input = `7 6 4 2 1
 // Result for part 1: 2
 
 func TestPart1(t *testing.T) {
-	fmt.Println("Day 02")
-
+	input := strings.Split(input, "\n")
+	result := part1(input)
+	fmt.Println(result)
 }
