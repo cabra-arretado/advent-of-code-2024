@@ -12,8 +12,6 @@ func part1(file []string) int {
 	fmt.Println("Day 02")
 	total := 0
 	for _, line := range file {
-		fmt.Printf("Processing line: %s\n", line)
-		fmt.Printf("Result: %t\n", ProcessLine(line))
 		if ProcessLine(line) {
 			total += 1
 		}
@@ -70,7 +68,7 @@ func ProcessLine(line string) bool {
 		if i == 0 {
 			continue
 		}
-		if !passDiff(numbers[i], numbers[i-1], leftToRight) {
+		if !passDiff(numbers[i-1], numbers[i], leftToRight) {
 			return false
 		}
 	}
