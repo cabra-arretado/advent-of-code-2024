@@ -2,8 +2,8 @@ package main
 
 import (
 	// "advent-of-code-2024/utils"
-	"advent-of-code-2024/cmd/day01"
-	"advent-of-code-2024/cmd/day02"
+	"advent-of-code-2024/internal/day01"
+	"advent-of-code-2024/internal/day02"
 	"bufio"
 	"fmt"
 	"os"

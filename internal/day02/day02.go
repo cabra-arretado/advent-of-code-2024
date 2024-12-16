@@ -1,7 +1,7 @@
 package day02
 
 import (
-	"advent-of-code-2024/utils"
+	"advent-of-code-2024/internal/utils"
 	"fmt"
 )
 

@@ -2,7 +2,7 @@ package day01
 
 import (
 	"fmt"
-	"advent-of-code-2024/utils"
+	"advent-of-code-2024/internal/utils"
 )
 
 func Day01() {
