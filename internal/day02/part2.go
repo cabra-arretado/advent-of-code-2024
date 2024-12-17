@@ -39,7 +39,17 @@ func ProcessLine2(line string) bool{
 		}
 		slice[i] = num
 	}
-	return ProcessNumbers(slice)
+	if ProcessNumbers(slice) {
+		return true
+	}
+	for i, _ := range slice {
+		newSlice := append([]int(nil), slice...)
+		newSlice = append(newSlice[:i], newSlice[i+1:]...)
+		if ProcessNumbers(newSlice) {
+			return true
+		}
+	}
+	return false
 }
 
 
