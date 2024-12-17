@@ -4,6 +4,7 @@ import (
 	// "advent-of-code-2024/utils"
 	"advent-of-code-2024/internal/day01"
 	"advent-of-code-2024/internal/day02"
+	"advent-of-code-2024/internal/day03"
 	"bufio"
 	"fmt"
 	"os"
@@ -20,6 +21,8 @@ func main() {
 		day01.Day01()
 	case "02":
 		day02.Day02()
+	case "03":
+		day03.Day03()
 	default:
 		fmt.Println("Day not found")
 	}
