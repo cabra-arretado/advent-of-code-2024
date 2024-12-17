@@ -10,4 +10,5 @@ func Day02() {
 
 	fmt.Println("Day 02")
 	fmt.Println(part1(input))
+	fmt.Println(part2(input))
 }

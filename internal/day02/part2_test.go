@@ -5,28 +5,21 @@ import (
 	"testing"
 )
 
-var input = `7 6 4 2 1
-1 2 7 8 9
-9 7 6 2 1
-1 3 2 4 5
-8 6 4 4 1
-1 3 6 7 9`
+// Per line: T F F T T T
+// Result for part 2: 4
 
-// Per line: T F F F F T
-// Result for part 1: 2
-
-func TestPart1(t *testing.T) {
+func TestPart2(t *testing.T) {
 	input := strings.Split(input, "\n")
 	t.Run("test Day 2", func(t *testing.T) {
-		got := ProcessLine(input[0])
+		got := ProcessLine(input[3])
 		want := true
 		if got != want {
 			t.Errorf("got %v want %v", got, want)
 		}
 	})
-	t.Run("Test Day 2", func(t *testing.T) {
+	t.Run("Test Day 2 Part 2", func(t *testing.T) {
 		got := part1(input)
-		want := 2
+		want := 4
 		if got != want {
 			t.Errorf("got %v want %v", got, want)
 		}
