@@ -13,5 +13,19 @@ func TestPart1(t *testing.T) {
 			t.Errorf("Expected 161, got %v", got)
 		}
 	})
-}
 
+	t.Run("Part 1 - processMul", func(t *testing.T) {
+		got := processMul("mul(2,4)")
+		if got != 8 {
+			t.Errorf("Expected 8, got %v", got)
+		}
+	})
+
+	t.Run("Part 1 - part1", func(t *testing.T) {
+		got := part1([]string{testInput})
+		input := utils.ReadFileAsSlice("02")
+		if got != 161 {
+			t.Errorf("Expected 161, got %v", got)
+		}
+	}
+}

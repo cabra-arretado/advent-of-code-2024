@@ -6,8 +6,8 @@ import (
 )
 
 func Day03() {
-	input := utils.ReadFileAsSlice("02")
+	input := utils.ReadFileAsSlice("03")
 
-	fmt.Println("Day 02")
-	fmt.Println(part1(input))
+	fmt.Println("Day 03")
+	fmt.Println("Part 1:", part1(input))
 }
