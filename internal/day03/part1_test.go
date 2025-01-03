@@ -23,9 +23,8 @@ func TestPart1(t *testing.T) {
 
 	t.Run("Part 1 - part1", func(t *testing.T) {
 		got := part1([]string{testInput})
-		input := utils.ReadFileAsSlice("02")
 		if got != 161 {
 			t.Errorf("Expected 161, got %v", got)
 		}
-	}
+	})
 }
